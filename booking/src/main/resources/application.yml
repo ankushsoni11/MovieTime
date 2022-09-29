@@ -1,0 +1,15 @@
+server:
+  port: 9001
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: cityModule
+          uri: http://localhost:8000/
+          predicates:
+            - Path=/city/**
+        - id: movieModule
+          uri: http://localhost:8002/
+          predicates:
+            - Path=/movie/**
