@@ -13,6 +13,7 @@
         <module>movie</module>
         <module>booking</module>
         <module>ServiceRegistory</module>
+        <module>managerGateway</module>
     </modules>
 
     <parent>
@@ -112,10 +113,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
             <version>3.0.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-apache-client4</artifactId>
+            <version>1.19.4</version>
+        </dependency>
 
     </dependencies>
 

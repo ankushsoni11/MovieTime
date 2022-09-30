@@ -2,17 +2,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan({"com.movietime.cityservice"})
-@EnableJpaRepositories("com.movietime.cityservice.repository")
-@EntityScan("com.movietime.cityservice.entity")
-public class CityApplication {
+@ComponentScan({"com.movietime.manager"})
+@EntityScan("com.movietime.manager.entity")
+public class ManagerGatewayService {
     public static void main(String[] args) {
-        SpringApplication.run(CityApplication.class, args);
+        SpringApplication.run(ManagerGatewayService.class, args);
     }
 }
