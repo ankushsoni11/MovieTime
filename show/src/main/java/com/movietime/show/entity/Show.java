@@ -1,7 +1,6 @@
 package com.movietime.show.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -10,6 +9,9 @@ import java.util.Date;
 @Table(name = "show")
 @Getter
 @Setter
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
