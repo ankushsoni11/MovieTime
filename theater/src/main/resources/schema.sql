@@ -5,4 +5,4 @@ CREATE TABLE `theater` (
   `theater_area` varchar(255) NOT NULL,
   `city_id` varchar(255) NOT NULL,
   PRIMARY KEY (`theater_id`)
-);
+  );
