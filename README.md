@@ -6,7 +6,7 @@ The is movie ticker booking application based on microservice architecture
 
 
 Real world example
-* City Service: This Service deal with City related data.
+* City Service: This Service deal with City related data e.g.
 ```java
 abstract class ICityContoller {
 
@@ -25,9 +25,32 @@ abstract class ICityContoller {
 * Seat: This Service deal with Show for a given show.
 * booking: This Service deal with booking movie and manage movie.
 
+## Booking API Gateway
+This API define routing rule to other microservices, hosted on 9001 port
+
+http://localhost:9001
+
+e.g.
+
+[Get all the city data](http://localhost:9001/city/v1/cities)
+
+[Get all the theater data](http://localhost:9001/theater/v1/theaters)
+
+[Get all the movie data](http://localhost:9001/movie/v1/movies)
+
+[Get all the show data](http://localhost:9001/show/v1/shows)
+
+[Get all the seat data](http://localhost:9001/seat/v1/1/seat)
+
+
+
+
 
 ## Technology Stack
-![alt text](./images/Intimation.jpeg "Technology Stack")
+![alt text](./images/technology-dia.png "Technology Stack")
+
+## Detail Design
+![alt text](./images/Detail Design.png "Detail Design")
 
 
 

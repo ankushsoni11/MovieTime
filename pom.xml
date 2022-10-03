@@ -11,9 +11,9 @@
         <module>show</module>
         <module>seat</module>
         <module>movie</module>
-        <module>booking</module>
         <module>ServiceRegistory</module>
         <module>managerGateway</module>
+        <module>bookingGateway</module>
     </modules>
 
     <parent>
@@ -125,6 +125,10 @@
             <groupId>com.sun.jersey.contribs</groupId>
             <artifactId>jersey-apache-client4</artifactId>
             <version>1.19.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
     </dependencies>
