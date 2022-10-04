@@ -50,7 +50,7 @@ e.g.
 ![alt text](./images/technology-dia.png "Technology Stack")
 
 ## Detail Design
-![alt text](./images/Detail Design.png "Detail Design")
+![alt text](./images/Detail-Design.png "Detail Design")
 
 
 
