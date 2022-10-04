@@ -9,7 +9,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class City implements Serializable {
 
-    private long city_id;
+    private long cityId;
 
     private String city_name;
 

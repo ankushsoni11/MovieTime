@@ -33,7 +33,8 @@ public class ManagerController extends IManagerController {
 
     @Override
     public ResponseEntity<MovieData> addMovie(@RequestBody MovieData movieData) {
-        cityClient.addCity();
+        ResponseEntity<City> city = cityClient.addCity(movieData.getCity());
+        Long cityId = city.getBody().getCityId();
         return null;
     }
 
