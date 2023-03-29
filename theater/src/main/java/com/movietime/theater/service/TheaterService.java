@@ -29,4 +29,8 @@ public class TheaterService {
     public Theater addTheater(Theater theater) {
         return theaterRespository.save(theater);
     }
+
+    public List<Object[]> getTheaterByCityIdAndName(long cityID, String theaterName) {
+        return theaterRespository.getTheaterByCityIdAndName(cityID, theaterName);
+    }
 }

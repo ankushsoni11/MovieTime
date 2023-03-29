@@ -1,19 +1,23 @@
 package com.movietime.cityservice.entity;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="city")
 @Getter
 @Setter
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class City {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @JsonProperty("cityId")
     private long city_id;
 
     @Column(nullable=false)

@@ -8,7 +8,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "movie")
-@IdClass(MovieTheaterKey.class)
 @Getter
 @Setter
 public class Movie {

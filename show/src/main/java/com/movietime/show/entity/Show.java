@@ -1,7 +1,6 @@
 package com.movietime.show.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -10,15 +9,14 @@ import java.util.Date;
 @Table(name = "show")
 @Getter
 @Setter
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long show_id;
-
     private String show_time;
-
     private Date show_date;
-
-
     private Long movie_id;
 }

@@ -32,4 +32,8 @@ abstract public class IShowController {
 
     @PostMapping("/v1/show")
     abstract ResponseEntity<Show> addShow(Show show);
+
+    @GetMapping("/v1/city/theater/{movieId}/{showDate}/{showTime}")
+    abstract ResponseEntity<Show> getShowbyMovieIdShowDateShowTime(Long movieId, String showDate, String showTime);
+
 }

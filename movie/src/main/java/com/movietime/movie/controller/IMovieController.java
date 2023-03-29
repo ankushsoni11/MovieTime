@@ -36,10 +36,11 @@ abstract public class IMovieController {
     abstract ResponseEntity<List<Movie>> getMovieByTheaterId(Long theaterId);
 
 
-    @GetMapping("/v1/{cityId}/{theaterId}/movie")
-    abstract ResponseEntity<List<Movie>> getMovieByTheaterAndCityId(Long cityId, Long theaterId);
+    @GetMapping("/v1/city/{theaterId}/{movieName}")
+    abstract ResponseEntity<List<Movie>> getMovieByTheaterIdAndMovieName(Long theaterId, String movieName);
 
     @PostMapping("/v1/movie")
     abstract ResponseEntity<Movie> addMovie(Movie movie);
+
 
 }

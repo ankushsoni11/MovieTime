@@ -13,4 +13,7 @@ public interface TheaterRespository extends JpaRepository<Theater, Long> {
     @Query(value = "select * from theater t where t.city_id = ?1", nativeQuery = true)
     public List<Object[]> getTheaterByCityId(long city_id);
 
+    @Query(value = "select * from theater t where t.city_id = ?1 and t.theater_name = ?2", nativeQuery = true)
+    public List<Object[]> getTheaterByCityIdAndName(long city_id, String theaterName);
+
 }

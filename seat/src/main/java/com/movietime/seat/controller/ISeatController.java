@@ -16,8 +16,8 @@ import java.util.List;
 abstract public class
 ISeatController {
 
-    @GetMapping("/v1/{showId}/seat")
-    abstract public ResponseEntity<List<Seat>> getSeatByShowId(Long showId);
+    @GetMapping("/v1/{seatId}/seat")
+    abstract public ResponseEntity<List<Seat>> getSeatBySeatId(Long seatId);
 
     @PostMapping("/v1/seat")
     abstract public ResponseEntity<Seat> addSeat(Seat seat);

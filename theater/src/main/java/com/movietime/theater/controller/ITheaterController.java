@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @Tag(name = "Theater API")
 @Api(value = "TheaterController", description = "REST APIs related to Theater Entity!!!!")
+@RequestMapping("/theater")
 abstract public class ITheaterController {
 
 
@@ -33,4 +35,9 @@ abstract public class ITheaterController {
 
     @PostMapping("/v1/theater")
     abstract ResponseEntity<Theater> addTheater(Theater theater);
+
+    @GetMapping("/v1/{cityId}/theater/{theaterName}")
+    abstract ResponseEntity<List<Object[]>> getTheaterByCityIdAndName(Long cityId, String theaterName);
+
+
 }

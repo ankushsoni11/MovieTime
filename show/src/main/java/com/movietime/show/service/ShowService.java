@@ -24,4 +24,10 @@ public class ShowService {
     public Show addShow(Show s) {
         return showRepository.save(s);
     }
+
+    public Show getShowbyMovieIdShowDateShowTime(Long movieId,
+                                                 String showDate,
+                                                 String showTime) {
+        return showRepository.getShowbyMovieIdShowDateShowTime(movieId, showDate, showTime);
+    }
 }
