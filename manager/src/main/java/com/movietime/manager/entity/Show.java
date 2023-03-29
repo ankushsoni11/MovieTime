@@ -17,7 +17,7 @@ public class Show {
 
     private String show_time;
 
-    private Date show_date;
+    private String show_date;
 
 
     private Long movie_id;

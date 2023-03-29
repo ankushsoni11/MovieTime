@@ -38,4 +38,12 @@ public class TheaterController extends ITheaterController {
                 theaterService.addTheater(theater),
                 HttpStatus.OK);
     }
+
+    @Override
+    ResponseEntity<List<Object[]>> getTheaterByCityIdAndName(@PathVariable("cityId") Long cityId,
+                                                             @PathVariable("theaterName") String theaterName) {
+        return new ResponseEntity<List<Object[]>>(
+                theaterService.getTheaterByCityIdAndName(cityId, theaterName),
+                HttpStatus.OK);
+    }
 }

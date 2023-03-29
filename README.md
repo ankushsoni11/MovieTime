@@ -53,4 +53,7 @@ e.g.
 ![alt text](./images/Detail-design.png "Detail Design")
 
 
+## Docker command
+docker run -p 8002:8002 -t movie:1.0-SNAPSHOT
+
 

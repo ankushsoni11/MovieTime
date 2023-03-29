@@ -3,6 +3,7 @@ package com.movietime.manager.client;
 
 import com.movietime.manager.entity.City;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,5 +19,8 @@ public interface CityClient {
 
     @GetMapping(value = "/city/v1/city/{cityId}", consumes = "application/json", produces = "application/json")
     ResponseEntity<City> getCitiById(@PathVariable("cityId") Long cityId);
+
+    @GetMapping("/city/v1/city/name/{cityName}")
+    ResponseEntity<City> getCitiByName(@PathVariable("cityName") String cityName);
 }
 

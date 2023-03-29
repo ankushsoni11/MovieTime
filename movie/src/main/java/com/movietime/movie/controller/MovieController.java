@@ -39,11 +39,11 @@ public class MovieController extends IMovieController {
                 HttpStatus.OK);
     }
 
-    @Override
-    ResponseEntity<List<Movie>> getMovieByTheaterAndCityId(@PathVariable(name = "cityId") Long cityId,
-                                                           @PathVariable(name = "theaterId") Long theaterId) {
+     @Override
+    ResponseEntity<List<Movie>> getMovieByTheaterIdAndMovieName(@PathVariable(name = "theaterId") Long theaterId,
+                                                                @PathVariable(name = "movieName") String movieName) {
         return new ResponseEntity<List<Movie>>(
-                movieService.getMovieByTheaterAndCityId(cityId, theaterId),
+                movieService.getMovieByTheaterIdAndMovieName(theaterId, movieName),
                 HttpStatus.OK);
     }
 

@@ -41,4 +41,13 @@ public class ShowController extends IShowController {
                 showService.addShow(show),
                 HttpStatus.OK);
     }
+
+    @Override
+    ResponseEntity<Show> getShowbyMovieIdShowDateShowTime(@PathVariable(name = "movieId") Long movieId,
+                                                          @PathVariable(name = "showDate") String showDate,
+                                                          @PathVariable(name = "showTime") String showTime) {
+        return new ResponseEntity<Show>(
+                showService.getShowbyMovieIdShowDateShowTime(movieId, showDate, showTime),
+                HttpStatus.OK);
+    }
 }

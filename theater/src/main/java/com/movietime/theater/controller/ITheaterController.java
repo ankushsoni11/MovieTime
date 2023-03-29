@@ -35,4 +35,9 @@ abstract public class ITheaterController {
 
     @PostMapping("/v1/theater")
     abstract ResponseEntity<Theater> addTheater(Theater theater);
+
+    @GetMapping("/v1/{cityId}/theater/{theaterName}")
+    abstract ResponseEntity<List<Object[]>> getTheaterByCityIdAndName(Long cityId, String theaterName);
+
+
 }

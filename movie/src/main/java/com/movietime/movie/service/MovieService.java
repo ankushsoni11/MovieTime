@@ -21,8 +21,8 @@ public class MovieService {
         return movieRepository.getMovieByTheaterId(theater_id);
     }
 
-    public List<Movie> getMovieByTheaterAndCityId(Long city_id, Long theater_id) {
-        return movieRepository.getMovieByTheaterAndCityId(city_id, theater_id);
+    public List<Movie> getMovieByTheaterIdAndMovieName(Long theater_id, String movieName) {
+        return movieRepository.getMovieByTheaterIdAndMovieName(theater_id, movieName);
     }
 
     public List<Movie> getAllMovies() {
